@@ -1,8 +1,7 @@
 get '/' do
   # render home page
-  @users = User.all
-
-  erb :index
+  users = User.all
+  erb :index, :locals => {:users => users}
 end
 
 #----------- SESSIONS -----------
